@@ -1,5 +1,6 @@
 package education.world.kidsstudy
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -22,6 +23,10 @@ class ShowActivity : AppCompatActivity() {
 
         var id =resources.getIdentifier(name,"drawable",packageName)
         binding.imageView.setImageResource(id)
+
+        var music = resources.getIdentifier(name,"raw",packageName)
+        var mp =MediaPlayer.create(applicationContext,music)
+        mp.start()
 
 
     }
